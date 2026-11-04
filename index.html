@@ -1,11 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfólio | Luis Bagi</title>
+  <meta name="description" content="Portfólio acadêmico: trajetória, projetos, eventos e sites desenvolvidos.">
+  <meta name="theme-color" content="#121212">
+  <meta property="og:title" content="Portfólio | Luis Bagi">
+  <meta property="og:description" content="Portfólio acadêmico: trajetória, projetos, eventos e sites desenvolvidos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/londrina-solid-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  
+  <svg class="defs-svg" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="blob-foto" clipPathUnits="objectBoundingBox">
+        <path d="M0.50,0.02 C0.72,-0.01 0.94,0.10 0.97,0.33 C1.00,0.54 0.98,0.74 0.87,0.89 C0.75,1.03 0.52,0.99 0.34,0.97 C0.14,0.95 0.01,0.82 0.02,0.60 C0.03,0.40 -0.01,0.22 0.13,0.09 C0.23,0.01 0.38,0.03 0.50,0.02Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <div class="progresso" aria-hidden="true"><i id="progresso"></i></div>
+
+  
+  <header class="nav" id="topo">
+    <div class="nav-in">
+      <a class="logo" href="#inicio" aria-label="Voltar ao início">
+        <span class="logo-blob" id="logo-iniciais" aria-hidden="true">LB</span>
+        <span class="logo-nome" data-bind="pessoa.nomeCurto">LUIS BAGI</span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre"><span class="m-num" aria-hidden="true">01</span>Sobre</a></li>
+          <li><a href="#atividades"><span class="m-num" aria-hidden="true">02</span>Atividades</a></li>
+          <li><a href="#projetos"><span class="m-num" aria-hidden="true">03</span>Projetos</a></li>
+          <li><a href="#eventos"><span class="m-num" aria-hidden="true">04</span>Eventos</a></li>
+          <li><a href="#sites"><span class="m-num" aria-hidden="true">05</span>Sites</a></li>
+          <li><a href="#habilidades"><span class="m-num" aria-hidden="true">06</span>Habilidades</a></li>
+          <li><a href="#contato" class="menu-destaque"><span class="m-num" aria-hidden="true">07</span>Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn-txt">menu</span>
+        <span class="menu-btn-ico" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
     
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="container hero-topo">
+        <p class="micro"><span class="micro-ponto" aria-hidden="true"></span><span id="hero-rotulo">portfólio acadêmico</span></p>
+        <p class="micro micro-contorno" id="hero-local">Nova Andradina - MS</p>
+      </div>
+
+      <div class="container hero-grade">
+        <div class="hero-texto">
+          <div class="nome-wrap">
+            <h1 class="hero-nome" id="titulo-hero" data-wonky data-bind="pessoa.nomeCurto">LUIS BAGI</h1>
+            <span class="pilula pilula-a" id="pilula-a" hidden></span>
+            <span class="pilula pilula-b" id="pilula-b" hidden></span>
+          </div>
+
+          <p class="hero-sub">
+            <span data-bind="pessoa.curso">Informática</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span data-bind="pessoa.instituicao">Instituto Federal</span>
+          </p>
+
+          <div class="hero-botoes">
+            <a class="btn btn-lima" href="#projetos">Ver projetos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-linha" href="#contato">Fale comigo</a>
+          </div>
+          <p class="micro hero-handle" id="hero-handle" hidden></p>
+        </div>
+
+        <figure class="foto-sticker">
+          <div class="foto-borda">
+            <img class="foto" data-bind-src="pessoa.foto" src="images/perfil.svg" alt="Foto de perfil" width="800" height="1000" fetchpriority="high">
+          </div>
+          <figcaption class="foto-legenda" data-bind="pessoa.legendaFoto">esse sou eu :)</figcaption>
+        </figure>
+
+        
+        <div class="adesivos" aria-hidden="true">
+          <img class="ad ad-smile" data-depth="22" src="images/stickers/smile-rosa.svg" alt="">
+          <img class="ad ad-estrela" data-depth="14" src="images/stickers/estrela-laranja.svg" alt="">
+          <img class="ad ad-triangulo" data-depth="26" src="images/stickers/triangulo-verde.svg" alt="">
+          <img class="ad ad-mola" data-depth="10" src="images/stickers/mola-azul.svg" alt="">
+          <img class="ad ad-onda" data-depth="18" src="images/stickers/onda-azul.svg" alt="">
+          <img class="ad ad-brilho" data-depth="30" src="images/stickers/brilho-lima.svg" alt="">
+          <i class="ad ad-ponto" data-depth="12"></i>
+          <i class="ad ad-ponto2" data-depth="20"></i>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="faixas" aria-hidden="true">
+      <div class="faixa faixa-lima"><div class="faixa-trilho" id="faixa-1"></div></div>
+      <div class="faixa faixa-rosa"><div class="faixa-trilho faixa-volta" id="faixa-2"></div></div>
+    </div>
+
+    
+    <section class="sec sec-laranja" id="sobre" data-num aria-labelledby="titulo-sobre">
+      <img class="deco deco-sobre-a" data-depth="16" src="images/stickers/flor-rosa.svg" alt="" aria-hidden="true">
+      <img class="deco deco-sobre-b" data-depth="24" src="images/stickers/brilho-creme.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>01</span><span>sobre</span></p>
+          <h2 class="titulo titulo-blob" id="titulo-sobre">sobre mim</h2>
+        </header>
+
+        <div class="sobre-grade">
+          <article class="cartao sobre-cartao revelar" style="--rot:-1deg">
+            <p class="sobre-nome">Meu nome é <strong data-bind="pessoa.nome">Luis Gustavo Guisone Bagi</strong>.</p>
+            <div id="sobre-texto"><p>Escreva aqui a sua apresentação.</p></div>
+            <ul class="destaques" id="sobre-destaques" aria-label="Resumo"></ul>
+          </article>
+
+          <aside class="sobre-lado">
+            <blockquote class="citacao revelar" style="--rot:1.5deg">
+              <span class="aspas" aria-hidden="true">“</span>
+              <p data-bind="pessoa.frase">Estudante apaixonado por tecnologia.</p>
+            </blockquote>
+            <ul class="stats" id="stats" aria-label="Números do portfólio"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-creme" id="atividades" data-num aria-labelledby="titulo-atividades">
+      <img class="deco deco-ativ-a" data-depth="18" src="images/stickers/mola-preta.svg" alt="" aria-hidden="true">
+      <img class="deco deco-ativ-b" data-depth="26" src="images/stickers/smile-lima.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>02</span><span>trajetória</span></p>
+          <h2 class="titulo" id="titulo-atividades" data-wonky>Atividades acadêmicas</h2>
+          <p class="sec-sub">Trabalhos, cursos e experiências que compõem a minha trajetória.</p>
+        </header>
+
+        <div class="filtros revelar" role="group" aria-label="Filtrar atividades por tipo">
+          <button type="button" class="filtro ativo" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="filtro" data-filtro="trabalho" aria-pressed="false">Trabalhos</button>
+          <button type="button" class="filtro" data-filtro="curso" aria-pressed="false">Cursos</button>
+          <button type="button" class="filtro" data-filtro="outra" aria-pressed="false">Outras</button>
+        </div>
+
+        <div class="grade-atividades" id="lista-atividades"></div>
+        <p class="vazio" id="vazio-atividades" hidden>Nenhuma atividade nessa categoria por enquanto.</p>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-preto" id="projetos" data-num aria-labelledby="titulo-projetos">
+      <img class="deco deco-proj-a" data-depth="20" src="images/stickers/onda-rosa.svg" alt="" aria-hidden="true">
+      <img class="deco deco-proj-b" data-depth="28" src="images/stickers/estrela-amarela.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>03</span><span>trabalhos</span></p>
+          <h2 class="titulo titulo-lima" id="titulo-projetos" data-wonky>Projetos</h2>
+          <p class="sec-sub">O que construí, como foi o processo e qual foi a minha participação.</p>
+        </header>
+        <div class="lista-projetos" id="lista-projetos"></div>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-rosa" id="eventos" data-num aria-labelledby="titulo-eventos">
+      <img class="deco deco-ev-a" data-depth="18" src="images/stickers/triangulo-verde.svg" alt="" aria-hidden="true">
+      <img class="deco deco-ev-b" data-depth="26" src="images/stickers/brilho-preto.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>04</span><span>palco</span></p>
+          <h2 class="titulo" id="titulo-eventos" data-wonky>Feiras e eventos</h2>
+          <p class="sec-sub">Participações, apresentações e premiações.</p>
+        </header>
+        <div class="grade-eventos" id="lista-eventos"></div>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-creme" id="sites" data-num aria-labelledby="titulo-sites">
+      <img class="deco deco-site-a" data-depth="20" src="images/stickers/flor-lima.svg" alt="" aria-hidden="true">
+      <img class="deco deco-site-b" data-depth="26" src="images/stickers/onda-azul.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>05</span><span>no ar</span></p>
+          <h2 class="titulo titulo-blob" id="titulo-sites">sites desenvolvidos</h2>
+          <p class="sec-sub">Interfaces que desenvolvi. Clique na imagem para ampliar.</p>
+        </header>
+        <div class="grade-sites" id="lista-sites"></div>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-lima" id="habilidades" data-num aria-labelledby="titulo-habilidades">
+      <img class="deco deco-hab-a" data-depth="18" src="images/stickers/smile-rosa.svg" alt="" aria-hidden="true">
+      <img class="deco deco-hab-b" data-depth="26" src="images/stickers/estrela-laranja.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <header class="sec-cab revelar">
+          <p class="rotulo"><span class="num" data-numero>06</span><span>ferramentas</span></p>
+          <h2 class="titulo titulo-blob" id="titulo-habilidades">habilidades</h2>
+          <p class="sec-sub">Tecnologias, ferramentas e competências que uso e estou aprendendo.</p>
+        </header>
+        <div class="grade-habilidades" id="lista-habilidades"></div>
+      </div>
+    </section>
+
+    
+    <section class="sec sec-preto sec-contato" id="contato" data-num aria-labelledby="titulo-contato">
+      <img class="deco deco-ct-a" data-depth="22" src="images/stickers/smile-lima.svg" alt="" aria-hidden="true">
+      <img class="deco deco-ct-b" data-depth="14" src="images/stickers/mola-azul.svg" alt="" aria-hidden="true">
+      <div class="container contato-grade">
+        <div class="contato-texto">
+          <header class="sec-cab revelar">
+            <p class="rotulo"><span class="num" data-numero>07</span><span>contato</span></p>
+            <h2 class="titulo titulo-lima" id="titulo-contato" data-wonky>Vamos conversar?</h2>
+            <p class="sec-sub" id="contato-msg">Quer conversar? É só falar comigo!</p>
+          </header>
+          <ul class="contato-links revelar" id="contato-links"></ul>
+          <p class="aviso-copia" id="aviso-copia" role="status" aria-live="polite"></p>
+        </div>
+
+        <form class="cartao contato-form revelar" id="form-contato" style="--rot:1.2deg">
+          <h3 class="form-titulo">Mande um recado</h3>
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+          <label for="f-mensagem">Mensagem</label>
+          <textarea id="f-mensagem" name="mensagem" rows="5" required></textarea>
+          <button class="btn btn-preto" type="submit">Enviar por e-mail</button>
+          <p class="form-nota">Ao enviar, o seu aplicativo de e-mail abre com a mensagem pronta.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="rodape">
+    <div class="container rodape-topo">
+      <p>© <span id="ano">2026</span> <strong data-bind="pessoa.nome">Luis Gustavo Guisone Bagi</strong>. Feito com
+        <svg class="coracao" viewBox="0 0 24 24" role="img" aria-label="amor"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.800-8 11-8 11Z" fill="currentColor"/></svg>
+        e muito código.</p>
+      <a class="btn btn-preto btn-pequeno" href="#inicio">Voltar ao topo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V7m0 0-5 5m5-5 5 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <p class="rodape-marca" aria-hidden="true" id="rodape-marca" data-bind="pessoa.nomeCurto">LUIS BAGI</p>
+  </footer>
+
+  <button class="topo-btn" id="topo-btn" type="button" aria-label="Voltar ao topo" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V7m0 0-5 5m5-5 5 5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+    <button class="lightbox-fechar" type="button" aria-label="Fechar imagem">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-legenda"></p>
+  </dialog>
+
+  <noscript><p class="sem-js">Ative o JavaScript do navegador para ver todo o conteúdo do portfólio.</p></noscript>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
